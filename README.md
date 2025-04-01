@@ -1,27 +1,39 @@
-# AngularFrontMuralis
+# 🚀 Guia de Instalação e Execução do Projeto Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
+Este guia explica como configurar e rodar o projeto Angular na sua máquina local.
 
-## Development server
+## 📌 Pré-requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 
-## Code scaffolding
+- [Node.js](https://nodejs.org/) (versão recomendada: 16 ou superior)
+- [Angular CLI](https://angular.io/cli) (versão recomendada: 15 ou superior)
+- [Git](https://git-scm.com/) (opcional, mas recomendado)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 📥 Clonando o Repositório
 
-## Build
+```sh
+# Clone o repositório do projeto
+git clone https://github.com/seu-usuario/seu-repositorio.git
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Acesse o diretório do projeto
+cd seu-repositorio
+```
 
-## Running unit tests
+## 📦 Instalando Dependências
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Execute o seguinte comando para instalar todas as dependências do projeto:
 
-## Running end-to-end tests
+```sh
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## ▶️ Rodando o Projeto
 
-## Further help
+Para iniciar o servidor de desenvolvimento, execute:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```sh
+ng serve
+```
+
+O projeto será servido em `http://localhost:4200/`. Você pode acessar no navegador.
