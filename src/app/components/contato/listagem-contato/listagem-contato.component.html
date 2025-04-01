@@ -1,0 +1,14 @@
+<section class="main">
+    <div class="card add-card" (click)="goToCadastroContato()">
+        <span class="icon_add">+</span>
+    </div>
+
+    <div *ngFor="let contato of contatos" class="card">
+        <p class="dados"><strong class="bold">Id:</strong> {{contato.id}}</p>
+        <p class="dados"><strong class="bold">Tipo de Contato:</strong> {{contato.tipoContato}}</p>
+        <p class="dados"><strong class="bold">Valor:</strong> {{contato.valor}}</p>
+        <p>=================></p>
+        <a class="icon_edit" href="editarContato/{{contato.id}}">Editar</a>
+        <a class="icon_delete" href="excluirContato/{{contato.id}}">Excluir</a>
+    </div>
+</section>

@@ -1,0 +1,54 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dados {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .icon_edit, .icon_delete {
+    font-size: 16px;
+    color: #4CAF50;
+    text-decoration: none;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .icon_edit:hover, .icon_delete:hover {
+    color: #45a049;
+  }
+  
+  .card + .card {
+    margin-top: 20px;
+  }
+
+  .add-card {
+    cursor: pointer;
+  }

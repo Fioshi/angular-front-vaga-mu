@@ -1,0 +1,34 @@
+<section class="section-container">
+    <form class="form-container" [formGroup]="formGroup" (ngSubmit)="inserir()">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" formControlName="nome">
+        <div *ngIf="formGroup.get('nome')?.invalid && formGroup.get('nome')?.touched">
+            <span class="text-red mensagem_erro">O nome é obrigatório.</span>
+        </div>
+    
+        <label for="endereco">Endereço</label>
+        <input type="text" name="endereco" id="endereco" formControlName="endereco">
+        <div *ngIf="formGroup.get('endereco')?.invalid && formGroup.get('endereco')?.touched">
+            <span class="text-red mensagem_erro">O endereço é obrigatório.</span>
+        </div>
+    
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" id="cpf" formControlName="cpf" placeholder="ex: 555.595.255-85">
+        <div *ngIf="formGroup.get('cpf')?.invalid && formGroup.get('cpf')?.touched">
+            <div *ngIf="formGroup.get('cpf')?.hasError('required')">
+                <span class="text-red mensagem_erro">O CPF é obrigatório.</span>
+            </div>
+            <div *ngIf="formGroup.get('cpf')?.hasError('pattern')">
+                <span class="text-red mensagem_erro">Por favor, insira um CPF válido (xxx.xxx.xxx-xx).</span>
+            </div>
+        </div>
+    
+        <label for="dataNascimento">Data de Nascimento</label>
+        <input type="date" name="dataNascimento" id="dataNascimento" formControlName="dataNascimento">
+        <div *ngIf="formGroup.get('dataNascimento')?.invalid && formGroup.get('dataNascimento')?.touched">
+            <span class="text-red mensagem_erro">A data de nascimento é obrigatória.</span>
+        </div>
+    
+        <button type="submit">Confirmar</button>
+    </form>
+</section>

@@ -1,0 +1,34 @@
+<section>
+    <form [formGroup]="formGroup" (ngSubmit)="inserir()">
+
+        <label for="tipoContato">Tipo de Contato</label>
+        <select id="tipoContato" formControlName="tipoContato">
+          <option value="TELEFONE">Telefone</option>
+          <option value="EMAIL">Email</option>
+        </select>
+        <div *ngIf="formGroup.get('tipoContato')?.invalid && formGroup.get('tipoContato')?.touched">
+            <span class="text-red mensagem_erro">Tipo de contato é obrigatório.</span>
+        </div>
+
+        <label for="valor">Número ou Email</label>
+        <input type="text" name="valor" id="valor" formControlName="valor" placeholder="examplo@mail.com ou +55 11 1122-3344">
+        
+        <div *ngIf="formGroup.get('valor')?.invalid && formGroup.get('valor')?.touched">
+            <div *ngIf="formGroup.get('valor')?.hasError('required')">
+                <span class="text-red mensagem_erro">O valor é obrigatório e precisa seguir o modelo escolhido acima.</span>
+            </div>
+            <div *ngIf="formGroup.get('valor')?.hasError('pattern')">
+                <span class="text-red mensagem_erro">Por favor, insira um número ou email válido.</span>
+            </div>
+        </div>
+
+        <label for="observacao">Observação</label>
+        <input type="text" name="observacao" id="observacao" formControlName="observacao">
+        
+        <div *ngIf="formGroup.get('observacao')?.invalid && formGroup.get('observacao')?.touched">
+            <span class="text-red mensagem_erro" *ngIf="formGroup.get('observacao')?.hasError('maxlength')">A observação não pode ter mais de 500 caracteres.</span>
+        </div>
+
+        <button type="submit" [disabled]="formGroup.invalid">Confirmar</button>
+    </form>
+</section>

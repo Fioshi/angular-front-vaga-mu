@@ -1,0 +1,11 @@
+<section class="main">
+    <div *ngFor="let cliente of clientes" class="card">
+        <p class="dados"><strong class="bold">Id:</strong> {{cliente.id}}</p>
+        <p class="dados"><strong class="bold">Nome:</strong> {{cliente.nome}}</p>
+        <p class="dados"><strong class="bold">CPF:</strong> {{cliente.cpf}}</p>
+        <p class="dados"><strong class="bold">Endereço:</strong> {{cliente.endereco}}</p>
+        <a class="icon_edit" href="editar/{{cliente.id}}">Editar</a>
+        <a class="icon_delete" href="excluir/{{cliente.id}}">Excluir</a>
+        <a class="icon_delete" href="listarContato/{{cliente.id}}">Contatos</a>
+    </div>
+</section>

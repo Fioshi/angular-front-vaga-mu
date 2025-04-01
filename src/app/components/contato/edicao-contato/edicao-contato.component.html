@@ -1,0 +1,19 @@
+<section class="main">
+  <div class="form-container">
+      <form [formGroup]="formGroup" (ngSubmit)="atualizar()">
+          <label for="tipoContato">Tipo de Contato</label>
+          <select id="tipoContato" formControlName="tipoContato">
+              <option value="TELEFONE">Telefone</option>
+              <option value="EMAIL">Email</option>
+          </select>
+
+          <label for="valor">Número ou Email</label>
+          <input type="text" name="valor" id="valor" formControlName="valor">
+
+          <label for="observacao">Observação</label>
+          <input type="text" name="observacao" id="observacao" formControlName="observacao">
+
+          <button type="submit">Confirmar</button>
+      </form>
+  </div>
+</section>
